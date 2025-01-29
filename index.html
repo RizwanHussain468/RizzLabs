@@ -33,6 +33,20 @@
     Author: BootstrapMade.com
     License: https://bootstrapmade.com/license/
   ======================================================= -->
+  <style>
+    #whatsapp-btn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 1000;
+      transition: transform 0.3s ease-in-out;
+    }
+  
+    #whatsapp-btn:hover {
+      transform: scale(1.1);
+    }
+  </style>
+
 </head>
 
 <body>
@@ -41,6 +55,9 @@
   Header
   ============================-->
   <header id="header" class="fixed-top">
+    <a id="whatsapp-btn" href="https://wa.me/+923295235116" target="_blank">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" width="50">
+    </a>
     <div class="container">
 
       <div class="logo float-left">
@@ -924,6 +941,16 @@
   <!-- <div id="preloader"></div> -->
 
   <!-- JavaScript Libraries -->
+   <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      let whatsappBtn = document.getElementById("whatsapp-btn");
+
+      // Show button only after 3 seconds
+      setTimeout(() => {
+        whatsappBtn.style.display = "block";
+      }, 3000);
+    });
+  </script>
   <script src="lib/jquery/jquery.min.js"></script>
   <script src="lib/jquery/jquery-migrate.min.js"></script>
   <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
